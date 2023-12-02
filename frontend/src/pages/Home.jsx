@@ -7,7 +7,9 @@ import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
 import { Link } from "react-router-dom";
-import {ArrowRight} from "lucide-react"
+import { ArrowRight } from "lucide-react";
+import About from "../components/About/About";
+import ServicesList from "../components/services/ServicesList";
 
 const Home = () => {
   return (
@@ -81,12 +83,12 @@ const Home = () => {
             Providing the best medical service
           </h2>
           <p className="text__para text-center">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam,
-            illum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+            enim aut magni delectus deleniti deserunt?
           </p>
         </div>
         <div className="flex flex-wrap items-center flex-col md:flex-row gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px] justify-between">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px]mt-[30px] lg:mt-[55px]">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
                 <img src={icon01} alt="" />
@@ -95,15 +97,14 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-zinc-800 font-[700] text-center">
                   Find a Doctor
                 </h2>
-                <p className="text-[16px] leading-7 text-zinc-500 font-[400] mt-4 text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cumque sapiente quo rem, sequi id et.
+                <p className="text-[16px] leading-7 text-zinc-500 font-[400] text-center">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Inventore autem sapiente quia aspernatur commodi sint modi
+                  asperiores at excepturi! Cumque?
                 </p>
-                <Link
-                  to="/doctors"
-                  className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none">
+                <Link className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none" to="/doctors">
                     <ArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                </Link>
               </div>
             </div>
             <div className="py-[30px] px-5">
@@ -114,15 +115,14 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-zinc-800 font-[700] text-center">
                   Find a Location
                 </h2>
-                <p className="text-[16px] leading-7 text-zinc-500 font-[400] mt-4 text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cumque sapiente quo rem, sequi id et.
+                <p className="text-[16px] leading-7 text-zinc-500 font-[400] text-center">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Inventore autem sapiente quia aspernatur commodi sint modi
+                  asperiores at excepturi! Cumque?
                 </p>
-                <Link
-                  to="/doctors"
-                  className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none">
+                <Link className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none" to="/doctors">
                     <ArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                </Link>
               </div>
             </div>
             <div className="py-[30px] px-5">
@@ -133,20 +133,34 @@ const Home = () => {
                 <h2 className="text-[26px] leading-9 text-zinc-800 font-[700] text-center">
                   Book Appointment
                 </h2>
-                <p className="text-[16px] leading-7 text-zinc-500 font-[400] mt-4 text-center">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cumque sapiente quo rem, sequi id et.
+                <p className="text-[16px] leading-7 text-zinc-500 font-[400] text-center">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Inventore autem sapiente quia aspernatur commodi sint modi
+                  asperiores at excepturi! Cumque?
                 </p>
-                <Link
-                  to="/doctors"
-                  className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none">
+                <Link className="w-[44px] h-[44px] rounded-full border border-solid border-zinc-900 mt-[30px] mx-auto flex items-center justify-center group hover:bg-indigo-500 hover:border-none" to="/doctors">
                     <ArrowRight className="group-hover:text-white w-6 h-5"/>
-                  </Link>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <About/>
+      {/* service section start */}
+      <section>
+        <div className="container">
+          <div className="mx-auto xl:w-[470px]">
+            <h2 className="heading text-center">Our Medical Service</h2>
+            <p className="text__para text-center">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, neque.
+            </p>
+          </div>
+          <ServicesList/>
+        </div>
+      </section>
+      {/* service section end */}
     </>
   );
 };
