@@ -12,6 +12,7 @@ import About from "../components/About/About";
 import ServicesList from "../components/services/ServicesList";
 import featureImg from "../assets/images/feature-img.png"
 import videoIcon from "../assets/images/video-icon.png"
+import DoctorsList from "../components/Doctors/DoctorsList";
 
 const Home = () => {
   return (
@@ -203,11 +204,22 @@ const Home = () => {
                 <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg-py-[60px] lg:px-[10px] text-[8px] leading-[8px] lg:leading-4 text-blue-500 font-[500] mt-2 lg:mt-4">
                     consultation
                 </div>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
       </section>
+      {/* our great doctors */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">Our Great Doctors</h2>
+            <p className="text_para text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore cum hic accusantium possimus velit perspiciatis?</p>
+          </div>
+          <DoctorsList/>
+        </div>
+      </section>
+      {/* our great doctors */}
     </>
   );
 };
