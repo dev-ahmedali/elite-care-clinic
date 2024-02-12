@@ -6,6 +6,7 @@ import heroImg03 from "../assets/images/hero-img03.png";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
+import faqImg from "../assets/images/faq-img.png";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import About from "../components/About/About";
@@ -13,6 +14,8 @@ import ServicesList from "../components/services/ServicesList";
 import featureImg from "../assets/images/feature-img.png"
 import videoIcon from "../assets/images/video-icon.png"
 import DoctorsList from "../components/Doctors/DoctorsList";
+import FaqList from "../components/faq/FaqList";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -220,6 +223,33 @@ const Home = () => {
         </div>
       </section>
       {/* our great doctors */}
+      {/* faq section */}
+      <section>
+          <div className="container">
+            <div className="flex justify-between gap-[50px] lg:gap-0">
+              <div className="w-1/2 hidden md:block">
+                <img src={faqImg} alt="" />
+              </div>
+              <div className="w-full md:w-1/2">
+                  <h2 className="heading">Most question by our beloved Patients</h2>
+                  <FaqList/>
+              </div>
+            </div>
+          </div>
+      </section>
+      {/* testimonial start */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              What our patient say
+            </h2>
+            <p className="text__para text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, itaque?</p>
+          </div>
+          <Testimonial/>
+        </div>
+      </section>
+      {/* testimonial end */}
     </>
   );
 };
